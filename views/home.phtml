@@ -1,0 +1,22 @@
+
+
+<h2><i class="fas fa-home"></i>Accueil</h2>
+<div class="listArticles">
+	
+	<?php 
+	
+	foreach($listArticles AS $article):?>
+		<article>
+			<h3><i class="far fa-hand-point-right"></i><a href="comment.php"><?=$article['title']?></a></h3>
+			<h6><?=$article['name']?></h6>
+			<?php
+				$article['contentCut'] = substr($article['content'], 0, 30);
+			?>
+			<p><?= $article['contentCut']?>[...]</p>
+
+
+			<p class="author">Rédigé par <?=$article['lastname']?> <?=$article['firstname']?> le <?=$article['created_at']?></p>
+			
+	<?php endforeach ?>
+
+</div>
