@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Ven 08 Juin 2018 à 16:44
+-- Généré le :  Lun 11 Juin 2018 à 17:02
 -- Version du serveur :  5.7.22-0ubuntu0.16.04.1
 -- Version de PHP :  7.0.30-0ubuntu0.16.04.1
 
@@ -98,6 +98,16 @@ CREATE TABLE `comment` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Contenu de la table `comment`
+--
+
+INSERT INTO `comment` (`id`, `created_at`, `pseudo`, `content`, `article_id`) VALUES
+(1, '2018-06-11 13:32:56', 'nono', 'duzdy ez yajz', 1),
+(2, '2018-06-11 15:11:54', 'eza,eez', 'azejzhaezakez', 1),
+(3, '2018-06-11 15:15:15', 'eza,eez', 'azejzhaezakez', 1),
+(4, '2018-06-11 16:56:22', 'zjzke', '', 1);
+
+--
 -- Index pour les tables exportées
 --
 
@@ -148,7 +158,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT pour la table `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

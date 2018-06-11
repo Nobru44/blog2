@@ -31,3 +31,33 @@ article {
 .author {
 	font-size : 0.8em;
 }
+.commentaire {
+	display : flex;
+	flex-direction: column;
+	text-align : center;
+}
+fieldset {
+	width : 50%;
+	margin : 0 auto;
+	display : flex;
+	flex-direction: column;
+}
+fieldset button {
+	margin : 0 auto;
+	width : 150px;
+}
+.commentaires {
+	width : 50%;
+	background-color: silver;
+}
+.newArticle {
+	margin : 2em auto;
+}
+.newArticle label, textarea {
+	width : 100%;
+}
+
+.newArticle select {
+	margin : 0 auto;
+	width : 200px;
+}

@@ -1,0 +1,40 @@
+<h2><i class="far fa-file-alt"></i>Rédiger un nouvel article</h2>
+
+
+
+<div class="newArticle">
+	<fieldset>
+		<legend>Nouvel article</legend>
+		<form action="editer.php" method="POST">
+			<label>Titre</label>
+		 	<textarea name="title" cols="60" rows="2"></textarea>
+			<label>Texte</label>
+			<textarea name="text" cols="60" rows="10" wrap="hard"></textarea>
+	
+	<?php $authorList = getAuthorList() ?>
+			<label>Auteur</label>
+			<select name="auteur">
+				
+	<?php foreach($authorList AS $author):?>
+			
+				<option value="<?=$author['id']?>"><?=$author['firstname']?></option>
+	<?php endforeach ?>
+			</select><br>
+
+
+	<?php $categoryList = getCategoryList() ?>
+			<label>Rubrique</label>
+			<select name="category">
+	
+	<?php foreach($categoryList AS $category):?>
+			
+				<option value="<?=$category['id']?>"><?=$category['name']?></option>
+	<?php endforeach ?>
+			</select><br>
+			
+			<button type="submit">Ajouter</button>
+			<button type="reset">Annuler</button>
+
+		</form>
+	</fieldset>
+</div>
